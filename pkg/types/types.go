@@ -11,6 +11,14 @@ const (
 
 type Pan string
 type Category string
+type Status string
+
+const (
+	StatusOk         Status = "OK"
+	StatusFail       Status = "FAIL"
+	StatusInProgress Status = "INPROGRESS"
+)
+
 type Card struct {
 	ID         int
 	PAN        Pan
@@ -21,7 +29,6 @@ type Card struct {
 	Name       string
 	Active     bool
 }
-
 type Payment struct {
 	ID       int
 	Amount   Money
